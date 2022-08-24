@@ -1,0 +1,58 @@
+package com.utility;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
+import com.aventstack.extentreports.ExtentTest;
+
+public class Library {
+	
+	static ExtentTest test;
+	
+	public static void custom_sendkeys(WebElement element,String value) {
+		try {
+		element.sendKeys(value);
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		
+		
+	}
+	
+	public static void custom_click(WebElement element) {
+		
+		try {
+			element.click();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+
+}
+	
+	public static void custom_HandleDropDown(WebElement element , String text) {
+	try {	
+	Select Select = new Select(element);
+	
+    Select.deselectByVisibleText(text);
+	} catch (Exception e) {
+	System.out.println(e.getMessage());
+	}
+				
+	}
+		public static void custom_HandleMouseHover(WebDriver driver,WebElement element) {
+			
+			try {
+			Actions act = new Actions (driver);
+			act.moveToElement(element).click().build().perform();
+			}catch(Exception e) {
+				System.out.println(e.getMessage());
+			}
+		}
+		
+		
+		
+	}
+

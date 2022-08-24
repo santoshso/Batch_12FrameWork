@@ -1,0 +1,37 @@
+package pomclass;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+public class Test_Demo {
+           
+	@FindBy(how=How.XPATH,using = "//input[@id='email']")
+	private WebElement txt_emailid;
+	
+	@FindBy(how=How.XPATH,using = "//input[@id='pass']")
+	private WebElement txt_password;
+	
+	@FindBy(how=How.XPATH,using = "//button[@id='loginbutton']")
+	private WebElement txt_login;
+
+	public WebElement getTxt_emailid() {
+		return txt_emailid;
+	}
+
+      public WebElement getTxt_password() {
+		return txt_password;
+	}
+
+	
+	
+
+	public WebElement getTxt_login() {
+		return txt_login;
+	}
+
+	
+	}
+	
+	
+      

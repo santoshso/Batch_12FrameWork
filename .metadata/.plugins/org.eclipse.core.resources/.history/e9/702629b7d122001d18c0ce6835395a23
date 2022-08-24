@@ -1,0 +1,34 @@
+package Com.Test;
+
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+import com.pageobject.Loginpom;
+import com.utility.Baseclass;
+import com.utility.Library;
+
+public class Test_tc_001 extends Baseclass {
+	
+	@Test
+	public void verify_validCredential() {
+		//Webelement
+		
+		Loginpom Login =PageFactory.initElements(driver, Loginpom.class);
+		Library.custom_sendkeys(Login.getTxt_emaid(), excel.getStringData("Sheet1", 0, 0));
+		Library.custom_sendkeys(Login.getTxt_password(),excel.getStringData("Sheet1", 0, 1));
+		Library.custom_click(Login.getTxt_login());
+		
+		
+		//Login.getTxt_emaid().sendKeys("test@gmail.com");
+		//Login.getTxt_password().sendKeys("12345678");
+		//Login.getTxt_login().click();
+	
+	
+	
+	
+	}
+	
+	
+	}
+
+

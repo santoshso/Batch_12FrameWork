@@ -1,0 +1,29 @@
+package Com.Test;
+
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+import com.pageobject.Loginpom;
+import com.utility.Baseclass;
+
+public class Test_tc_001 extends Baseclass {
+	
+	@Test
+	public void verify_validCedential() {
+		//Webelement
+		
+		Loginpom Login =PageFactory.initElements(driver, Loginpom.class);
+		
+		Login.getTxt_emaid().sendKeys("test@gmail.com");
+		Login.getTxt_password().sendKeys("12345678");
+		Login.getTxt_login().click();
+	
+	
+	
+	
+	}
+	
+	
+	}
+
+
